@@ -1,12 +1,11 @@
 {
-  "name": "ChatBot",
+  "name": "Simple-Mean-Generator",
   "description": "",
   "main": "app.js",
   "authors": [
     "hoangphucvu <ngohungphuc95@gmail.com>"
   ],
-  "license": "MIT",
-  "homepage": "https://github.com/hoangphucvu/Chat-Bot",
+  "homepage": "https://github.com/hoangphucvu/Simple-Mean-Generator",
   "ignore": [
     "**/.*",
     "node_modules",

@@ -9,8 +9,7 @@
         "rawSpec": "",
         "spec": "latest",
         "type": "tag"
-      },
-      "D:\\SourceCode\\chat-bot\\Source"
+      }
     ]
   ],
   "_from": "mean-generator@latest",
@@ -45,7 +44,7 @@
   "_shasum": "f67f7781560a8fda66d09dc2c79baca39e2b879a",
   "_shrinkwrap": null,
   "_spec": "mean-generator",
-  "_where": "D:\\SourceCode\\chat-bot\\Source",
+  "_where": "D:\\Mean-Generator",
   "author": {
     "name": "Tony Ngo"
   },
@@ -86,7 +85,6 @@
   ],
   "name": "mean-generator",
   "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
   "scripts": {},
-  "version": "1.0.3"
+  "version": "1.0.7"
 }
