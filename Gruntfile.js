@@ -25,11 +25,22 @@ module.exports = function(grunt) {
         jshint: {
             all: ['Gruntfile.js', 'public/frontend/**/!*.min.js']
         },
+        concurrent: {
+          dev: {
+            tasks: ['nodemon', 'node-inspector', 'watch'],
+            options: {
+              logConcurrentOutput: true
+            }
+          }
+        },
         nodemon: {
             dev: {
                 script: 'app.js',
                 options: {
                     ext: 'js,jade',
+                    env: {
+                        PORT:8000
+                    },
                     // omit this property if you aren't serving HTML files and 
                     // don't want to open a browser tab on start
                     callback: function(nodemon) {
@@ -37,7 +48,7 @@ module.exports = function(grunt) {
                         nodemon.on('config:update', function() {
                             // Delay before server listens on port
                             setTimeout(function() {
-                                require('open')('http://localhost:3000');
+                                require('open')('http://localhost:8000');
                             }, 1000);
                         });
 
@@ -51,6 +62,14 @@ module.exports = function(grunt) {
                     }
                 }
             },
+        },
+        watch: {
+          server: {
+            files: ['.rebooted'],
+            options: {
+              livereload: true
+            }
+          } 
         }
     });
 

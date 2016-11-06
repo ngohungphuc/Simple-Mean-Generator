@@ -17,3 +17,6 @@ $ npm install
 $ grunt
 ```
 
+Don't do anything it will open new tab for you
+
+>Happy coding :D
