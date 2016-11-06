@@ -46,18 +46,12 @@ module.exports = function(grunt) {
                     callback: function(nodemon) {
                         // opens browser on initial server start
                         nodemon.on('config:update', function() {
-                            // Delay before server listens on port
-                            setTimeout(function() {
                                 require('open')('http://localhost:8000');
-                            }, 1000);
                         });
 
                         // refreshes browser when server reboots
                         nodemon.on('restart', function() {
-                            // Delay before server listens on port
-                            setTimeout(function() {
                                 require('fs').writeFileSync('.rebooted', 'rebooted');
-                            }, 1000);
                         });
                     }
                 }
