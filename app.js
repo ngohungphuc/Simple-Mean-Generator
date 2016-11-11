@@ -1,15 +1,17 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var bodyParser = require('body-parser');
-var cookieParser = require('cookie-parser');
-var session = require('express-session');
-//uncomment this after config db
-//var db = require('./config/db');
-var app = express();
-var port = process.env.PORT || 3000;
-
+var express = require('express'),
+    path = require('path'),
+    favicon = require('serve-favicon'),
+    logger = require('morgan'),
+    bodyParser = require('body-parser'),
+    cookieParser = require('cookie-parser'),
+    session = require('express-session'),
+    //uncomment this after you change db name
+    //db = require('./config/db'),
+    app = express(),
+    port = process.env.PORT || 3000,
+    http = require('http'),
+    server = http.createServer(app),
+    env = process.env.NODE_ENV || 'development';
 //require route for app
 var indexRoute = require('./app/routes/index.server.routes');
 
@@ -23,45 +25,36 @@ app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(session({secret:"asdkoasdkascmkascpoascmkalscasoi",resave:false,saveUninitialized:true}));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+//cookie and session for user authenticate
+/*app.use(cookieParser());
+app.use(session({
+    secret: "asdkoasdkascmkascpoascmkalscasoi",
+    resave: false,
+    saveUninitialized: true
+}));*/
 
-//set route for specific request
-app.use('/', indexRoute);
 
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+//middleware for single page 
+app.get('/partials/:partialPath', function(req, res) {
+    res.render('partials/' + req.params.partialPath);
 });
+//catch all route to prevent 404 error
+app.get('*', indexRoute);
 
-// error handlers
 
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('layout/error', {
-      message: err.message,
-      error: err
-    });
-  });
+
+// Config reload whenever frontend folder change
+if (env === 'development') {
+    // TODO
 }
 
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('layout/error', {
-    message: err.message,
-    error: {}
-  });
-});
-
-app.listen(port,function(req,res){
-  console.log('Running on port ' + port);
+if (env === 'production') {
+    // TODO
+}
+console.log(env);
+server.listen(port, function() {
+    console.log("Web server listening on port " + port);
 });

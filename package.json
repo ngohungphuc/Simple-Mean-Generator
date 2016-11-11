@@ -1,7 +1,32 @@
 {
-  "_args": [
-    [
-      {
+    "_args": [
+        [{
+            "raw": "mean-generator",
+            "scope": null,
+            "escapedName": "mean-generator",
+            "name": "mean-generator",
+            "rawSpec": "",
+            "spec": "latest",
+            "type": "tag"
+        }]
+    ],
+    "_from": "mean-generator@latest",
+    "_id": "mean-generator@1.0.3",
+    "_inCache": true,
+    "_installable": true,
+    "_location": "/mean-generator",
+    "_nodeVersion": "4.6.0",
+    "_npmOperationalInternal": {
+        "host": "packages-12-west.internal.npmjs.com",
+        "tmp": "tmp/mean-generator-1.0.3.tgz_1478225970330_0.8185566312167794"
+    },
+    "_npmUser": {
+        "name": "ngohungphuc",
+        "email": "ngohungphuc95@gmail.com"
+    },
+    "_npmVersion": "2.15.9",
+    "_phantomChildren": {},
+    "_requested": {
         "raw": "mean-generator",
         "scope": null,
         "escapedName": "mean-generator",
@@ -9,82 +34,55 @@
         "rawSpec": "",
         "spec": "latest",
         "type": "tag"
-      }
-    ]
-  ],
-  "_from": "mean-generator@latest",
-  "_id": "mean-generator@1.0.3",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/mean-generator",
-  "_nodeVersion": "4.6.0",
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/mean-generator-1.0.3.tgz_1478225970330_0.8185566312167794"
-  },
-  "_npmUser": {
-    "name": "ngohungphuc",
-    "email": "ngohungphuc95@gmail.com"
-  },
-  "_npmVersion": "2.15.9",
-  "_phantomChildren": {},
-  "_requested": {
-    "raw": "mean-generator",
-    "scope": null,
-    "escapedName": "mean-generator",
+    },
+    "_requiredBy": [
+        "#USER"
+    ],
+    "_resolved": "https://registry.npmjs.org/mean-generator/-/mean-generator-1.0.3.tgz",
+    "_shasum": "f67f7781560a8fda66d09dc2c79baca39e2b879a",
+    "_shrinkwrap": null,
+    "_spec": "mean-generator",
+    "_where": "D:\\Mean-Generator",
+    "author": {
+        "name": "Tony Ngo"
+    },
+    "dependencies": {
+        "bcrypt-nodejs": "0.0.3",
+        "body-parser": "~1.15.1",
+        "cookie-parser": "^1.4.3",
+        "debug": "~2.2.0",
+        "express": "~4.13.4",
+        "express-session": "^1.14.1",
+        "jade": "~1.11.0",
+        "mongodb": "^2.2.10",
+        "mongoose": "^4.6.4",
+        "morgan": "~1.7.0",
+        "open": "0.0.5",
+        "serve-favicon": "~2.3.0"
+    },
+    "description": "Simple MeanJs generator",
+    "devDependencies": {
+        "grunt": "^1.0.1",
+        "grunt-concurrent": "^2.3.1",
+        "grunt-contrib-clean": "^1.0.0",
+        "grunt-contrib-concat": "^1.0.1",
+        "grunt-contrib-cssmin": "^1.0.2",
+        "grunt-contrib-jshint": "^1.0.0",
+        "grunt-contrib-uglify": "^2.0.0",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-nodemon": "^0.4.2"
+    },
+    "directories": {},
+    "dist": {
+        "shasum": "f67f7781560a8fda66d09dc2c79baca39e2b879a",
+        "tarball": "https://registry.npmjs.org/mean-generator/-/mean-generator-1.0.3.tgz"
+    },
+    "maintainers": [{
+        "name": "ngohungphuc",
+        "email": "ngohungphuc95@gmail.com"
+    }],
     "name": "mean-generator",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "https://registry.npmjs.org/mean-generator/-/mean-generator-1.0.3.tgz",
-  "_shasum": "f67f7781560a8fda66d09dc2c79baca39e2b879a",
-  "_shrinkwrap": null,
-  "_spec": "mean-generator",
-  "_where": "D:\\Mean-Generator",
-  "author": {
-    "name": "Tony Ngo"
-  },
-  "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
-    "body-parser": "~1.15.1",
-    "cookie-parser": "^1.4.3",
-    "debug": "~2.2.0",
-    "express": "~4.13.4",
-    "express-session": "^1.14.1",
-    "jade": "~1.11.0",
-    "mongodb": "^2.2.10",
-    "mongoose": "^4.6.4",
-    "morgan": "~1.7.0",
-    "open": "0.0.5",
-    "serve-favicon": "~2.3.0"
-  },
-  "description": "Simple MeanJs generator",
-  "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-cssmin": "^1.0.2",
-    "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-uglify": "^2.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-nodemon": "^0.4.2",
-    "nodemon": "^1.11.0"
-  },
-  "directories": {},
-  "dist": {
-    "shasum": "f67f7781560a8fda66d09dc2c79baca39e2b879a",
-    "tarball": "https://registry.npmjs.org/mean-generator/-/mean-generator-1.0.3.tgz"
-  },
-  "maintainers": [
-    {
-      "name": "ngohungphuc",
-      "email": "ngohungphuc95@gmail.com"
-    }
-  ],
-  "name": "mean-generator",
-  "optionalDependencies": {},
-  "scripts": {},
-  "version": "1.0.10"
+    "optionalDependencies": {},
+    "scripts": {},
+    "version": "1.0.11"
 }
