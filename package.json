@@ -56,7 +56,7 @@
         "jade": "~1.11.0",
         "mongodb": "^2.2.10",
         "mongoose": "^4.6.4",
-        "morgan": "~1.7.0",
+        "morgan": "~1.9.1",
         "open": "0.0.5",
         "serve-favicon": "~2.3.0"
     },
