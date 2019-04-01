@@ -57,7 +57,7 @@
         "mongodb": "^2.2.10",
         "mongoose": "^4.6.4",
         "morgan": "~1.7.0",
-        "open": "0.0.5",
+        "open": "6.0.0",
         "serve-favicon": "~2.3.0"
     },
     "description": "Simple MeanJs generator",
